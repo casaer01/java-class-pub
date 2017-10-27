@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 /**
- * @author yasiro01
+ * @author casaer01
  */
 public class Ex1Driver {
   public static void main(String args[]) {
@@ -14,8 +14,8 @@ public class Ex1Driver {
     for (int i = 0; i < 10; i++) {
       numbers[i] = rnd.nextInt(10);
     }
-    task1();
-//    task2();
+//    task1();
+    task2();
 //    task3();
 //    task4();
 //    task5();
@@ -36,7 +36,17 @@ public class Ex1Driver {
    * TODO: Task 2: Print all numbers between 1 and 100 (inclusive) replacing all multiples of 3 with "foo", multiples of 5 with "bar", multiples of 3 and 5 with "huh"
    */
   public static void task2() {
-    throw new UnsupportedOperationException("Task 2 is not implemented yet.");
+      for(int i = 1; i < 100; i++) {
+          if ( i % 3 == 0 && i % 5 ==0) {
+              System.out.println("huh");
+          } else if (i % 5 == 0) {
+              System.out.println("bar");
+          } else if (i % 3 == 0) {
+              System.out.println("foo");
+          } else {
+              System.out.println(i);
+          }
+      }
   }
   /**
    * TODO: Task 3: Calculate and print the sum of all multiples of 7 between 1 and 100 (inclusive)
