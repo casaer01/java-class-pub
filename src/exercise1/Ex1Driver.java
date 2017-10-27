@@ -15,11 +15,11 @@ public class Ex1Driver {
       numbers[i] = rnd.nextInt(10);
     }
 //    task1();
-    task2();
+//    task2();
 //    task3();
 //    task4();
 //    task5();
-//    task6();
+    task6();
 //    task7();
 //    task8(numbers);
 //    task9();
@@ -52,25 +52,48 @@ public class Ex1Driver {
    * TODO: Task 3: Calculate and print the sum of all multiples of 7 between 1 and 100 (inclusive)
    */
   public static void task3() {
-    throw new UnsupportedOperationException("Task 3 is not implemented yet.");
+    int sum = 0;
+    for (int i = 0; i < 100; i++) {
+        if (i % 7 == 0 ) {
+            sum += i;
+        }
+    }
+    System.out.println("The sum of all multiples of 7 between 1 and 100 is " + sum);
   }
   /**
    * TODO: Task 4: Calculate and print sum and product of all numbers between 1 and 20 (inclusive)
    */
   public static void task4() {
-    throw new UnsupportedOperationException("Task 4 is not implemented yet.");
+    int sum = 0;
+    long product = 1;
+    
+    for (int i = 1; i <= 20; i++) {
+        sum += i;
+        product *= i;
+    }
+    System.out.println("The sum of all numbers between 1 and 20 is " + sum);
+    System.out.println("The product of all numbers between 1 and 20 is " + product);
   }
   /**
    * TODO: Task 5: Ask a user to enter their full name and print the initials (ie John Q Doe should yield JQD)
    */
   public static void task5() {
-    throw new UnsupportedOperationException("Task 5 is not implemented yet.");
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("Please enter your full name");
+    String fullName = keyboard.nextLine();
+    
+    String[] namebits = fullName.split(" ");
+    
+    for (int i = 0; i < namebits.length; i++) {       
+        System.out.print(namebits[i].charAt(0));
+    }
+    System.out.println(" ");
   }
   /**
    * TODO: Task 6: Create an array of 10 elements and initiate each element in it to the cube of its index (Do it in a loop, not during declaration)
    */
   public static void task6() {
-    throw new UnsupportedOperationException("Task 6 is not implemented yet.");
+    int[] arraylst = new int[10];
   }
   /**
    * TODO: Task 7: Create an array of 100 random integers between 1 and 100, ask the user for an integer and tell if that number is in the array
