@@ -94,6 +94,11 @@ public class Ex1Driver {
    */
   public static void task6() {
     int[] arraylst = new int[10];
+    for (int i = 0; i < arraylst.length; i++){
+        arraylst[i] = i * i * i;
+        System.out.print(arraylst[i] + " ");
+    }
+    System.out.println(" ");
   }
   /**
    * TODO: Task 7: Create an array of 100 random integers between 1 and 100, ask the user for an integer and tell if that number is in the array
