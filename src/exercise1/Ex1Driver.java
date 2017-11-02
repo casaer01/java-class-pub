@@ -1,10 +1,11 @@
 package exercise1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 
 /**
- * @author casaer01
+ * @author yasiro01
  */
 public class Ex1Driver {
   public static void main(String args[]) {
@@ -19,11 +20,12 @@ public class Ex1Driver {
 //    task3();
 //    task4();
 //    task5();
-    task6();
+//    task6();
 //    task7();
 //    task8(numbers);
-//    task9();
+    task9();
 //    task10();
+
   }
 
   /**
@@ -104,9 +106,34 @@ public class Ex1Driver {
    * TODO: Task 7: Create an array of 100 random integers between 1 and 100, ask the user for an integer and tell if that number is in the array
    */
   public static void task7() {
+    Scanner keyboard = new Scanner(System.in);
     Random rnd = new Random();
     rnd.setSeed(252);
-    throw new UnsupportedOperationException("Task 7 is not implemented yet.");
+    System.out.println("Enter a number");
+    String userstring = keyboard.nextLine();
+    int userNum = Integer.valueOf(userstring);
+    int[] arrayNum = new int[100];
+    boolean numFound = false;
+    
+    for (int i = 0; i < 100;i++){
+        arrayNum[i] = rnd.nextInt(100);
+    }
+    for (int i = 0; i < 100; i++){  
+        if (arrayNum[i]==userNum){
+            //System.out.println(userNum + "was found.");
+            numFound = true;
+        }
+        else if(arrayNum[99]!=userNum){
+            //System.out.println(userNum + "was not found.");
+            numFound = false;
+        }
+    }
+    if (numFound == true){
+        System.out.println(userNum + " was found.");
+    }
+    else if (numFound == false) {
+        System.out.println(userNum + " was not found.");
+    }
   }
   /**
    * TODO: Task 8: Take an array of integers as a parameter, calculate, print, and return the sum of its elements
@@ -114,14 +141,55 @@ public class Ex1Driver {
    * @return 
    */
   public static int task8(int[] numbers) {
-    throw new UnsupportedOperationException("Task 8 is not implemented yet.");
+    int sumArray = 0;
+    for (int i = 0; i < numbers.length;i++){
+      sumArray += numbers[i];
+    }
+    
+    System.out.println("The sum of all items in " + Arrays.toString(numbers) + " is " + sumArray);
+    return sumArray;
   }
   /**
    * TODO: Task 9: Ask a user to enter a word and write a function that tells if letters of a word are ordered (ie. "buy" would return true, while "bye" - false).
    * @return 
    */
   public static boolean task9() {
-    throw new UnsupportedOperationException("Task 9 is not implemented yet.");
+    boolean letterOrder = false;
+    char[] alp = new char[26]; 
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("Please enter a word.");
+    String userWord = keyboard.nextLine();
+    char[] userChar = userWord.toCharArray();
+    
+    //Creates Alphabet 
+    int position = 0;
+    for (char c = 'a'; c <= 'z'; c++) {
+        alp[position] = c;
+        position++;
+    }
+    int userInt = 0;
+    int alpIndex = 0;
+    while (userInt < userChar.length+1) {
+        if (userChar[userInt] == alp[alpIndex]){
+            userInt++;
+        }else if (userChar[userInt] != alp[alpIndex]){
+            alpIndex++;
+        }else if (alp[alpIndex] == 'z' && userInt == userChar.length){
+            letterOrder = false;
+        }else if (userInt == userChar.length){
+            letterOrder = true;
+        }
+    }
+//    for (int i = 0; i < alp.length; i++){
+//        if (userChar[userInt] == alp[i]){
+//            userInt++;
+//        }else if (userInt > userChar.length){
+//            letterOrder = true;
+//        }
+//    }
+    //System.out.println(Arrays.toString(alp));
+    //System.out.println(Arrays.toString(userChar));
+    return letterOrder;
   }
   /**
    * TODO: Task 10: Implement sieve of Eratosthenes and print all prime numbers between 1 and 100
