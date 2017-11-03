@@ -56,6 +56,7 @@ public class Collections {
     }
     System.out.printf("%-12s%5s%n", "Name", "Grade");
     for(HashMap.Entry item: gbMap.entrySet()){
+      //.getKey() finds the String & .getValue finds Int
       System.out.printf("%-12s%5d%n", item.getKey(), item.getValue());
     }
     

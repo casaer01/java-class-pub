@@ -43,13 +43,13 @@ public class Ex4DriverTest {
   @Test
   public void testTask1() {
     System.out.println("task1");
-    Integer n = 10;
+    Integer n = 5;
     Ex4Driver instance = new Ex4Driver();
     Integer expResult = 10;
     Integer result = instance.task1(n);
     assertEquals(expResult, result);
-    n = 10;
-    expResult = 10;
+    n = -5;
+    expResult = -10;
     result = instance.task1(n);
     assertEquals(expResult, result);
   }
