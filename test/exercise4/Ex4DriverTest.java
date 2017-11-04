@@ -53,5 +53,37 @@ public class Ex4DriverTest {
     result = instance.task1(n);
     assertEquals(expResult, result);
   }
+
+    /**
+     * Test of task2 method, of class Ex4Driver.
+     */
+    @Test
+    public void testTask2() {
+        System.out.println("task2");
+        String userstring = "Word";
+        Ex4Driver instance = new Ex4Driver();
+        int expResult = 4;
+        int result = instance.task2(userstring);
+        assertEquals(expResult, result);
+        userstring = "Jackson";
+        expResult = 7;
+        result = instance.task2(userstring);
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of task3 method, of class Ex4Driver.
+     */
+    @Test
+    public void testTask3() {
+        System.out.println("task3");
+        char charinput = 'c';
+        Ex4Driver instance = new Ex4Driver();
+        int expResult = 3;
+        int result = instance.task3(charinput);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
   
 }
