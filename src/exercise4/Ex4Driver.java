@@ -10,9 +10,12 @@ public int task1(int number){
     int sumtotal = number + number;
     return sumtotal;
 }
-/*Define a function that takes 1 string as a parameter and returns an integer. Write 2 unit tests to verify the function validity.
-public Integer task2(String);
-Define a function that takes 1 character as a parameter and returns an integer. Write 2 unit tests to verify the function validity.
+/*Define a function that takes 1 string as a parameter and returns an integer. Write 2 unit tests to verify the function validity.*/
+public int task2(String userstring){
+    int wordSize = userstring.length();
+    return wordSize;
+};
+/*Define a function that takes 1 character as a parameter and returns an integer. Write 2 unit tests to verify the function validity.
 public Integer task3(Character);
 Define a function that takes 1 string as a parameter and returns a character. Write 2 unit tests to verify the function validity.
 public Character task4(String);
