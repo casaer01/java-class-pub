@@ -15,11 +15,24 @@ public int task2(String userstring){
     int wordSize = userstring.length();
     return wordSize;
 };
-/*Define a function that takes 1 character as a parameter and returns an integer. Write 2 unit tests to verify the function validity.
-public Integer task3(Character);
-Define a function that takes 1 string as a parameter and returns a character. Write 2 unit tests to verify the function validity.
-public Character task4(String);
-Define a function that takes 2 integers as a parameter and returns an integer. Write 2 unit tests to verify the function validity.
+/*Define a function that takes 1 character as a parameter and returns an integer. Write 2 unit tests to verify the function validity.*/
+public int task3(char charinput){
+    int charValue = 0;
+    char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+    for(int i = 0; i < alphabet.length;i++){
+        if (charinput == alphabet[i]){
+            charValue = i + 1;
+            break;
+        }
+    }
+    return charValue;
+}
+/*Define a function that takes 1 string as a parameter and returns a character. Write 2 unit tests to verify the function validity.*/
+public char task4(String userString){
+    char[] firstChar = userString.toCharArray();    
+    return firstChar[0];
+}
+/*Define a function that takes 2 integers as a parameter and returns an integer. Write 2 unit tests to verify the function validity.
 public Integer task5(Integer, Integer);
 Define a function that takes a string and an integer as parameters and returns a Character. Write 2 unit tests to verify the function validity.
 public Character task6(String, Integer);
