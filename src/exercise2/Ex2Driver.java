@@ -20,14 +20,14 @@ public class Ex2Driver {
     for (int i = 0; i < 10; i++) {
       numberLst.add(rnd.nextInt(100));
     }
-    //task1(3);
-    //System.out.println(task2(numberArr, 90));
-    //System.out.println(task3(numberArr, 75));
-    //task4(numberArr);
-    //task5(numberArr);
-    //task6();
-    //task7();
-    //System.out.println(task8(numberLst, 75));
+    task1(3);
+    System.out.println(task2(numberArr, 90));
+    System.out.println(task3(numberArr, 75));
+    task4(numberArr);
+    task5(numberArr);
+    task6();
+    task7();
+    System.out.println(task8(numberLst, 75));
     task9();
     //task10(task9());
   }
