@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 /**
- * @author yasiro01
+ * @author casaer01
  */
 public class Ex1Driver {
   public static void main(String args[]) {
@@ -15,14 +15,14 @@ public class Ex1Driver {
     for (int i = 0; i < 10; i++) {
       numbers[i] = rnd.nextInt(10);
     }
-//    task1();
-//    task2();
-//    task3();
-//    task4();
-//    task5();
-//    task6();
-//    task7();
-//    task8(numbers);
+    task1();
+    task2();
+    task3();
+    task4();
+    task5();
+    task6();
+    task7();
+    task8(numbers);
     task9();
 //    task10();
 
