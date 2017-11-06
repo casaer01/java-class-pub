@@ -1,7 +1,8 @@
 package exercise4;
-
+import java.util.ArrayList;
+import java.util.HashMap;
 /**
- * @author yasiro01
+ * @author casaer01
  */
 public class Ex4Driver {
   /*
@@ -32,17 +33,36 @@ public char task4(String userString){
     char[] firstChar = userString.toCharArray();    
     return firstChar[0];
 }
-/*Define a function that takes 2 integers as a parameter and returns an integer. Write 2 unit tests to verify the function validity.
-public Integer task5(Integer, Integer);
-Define a function that takes a string and an integer as parameters and returns a Character. Write 2 unit tests to verify the function validity.
-public Character task6(String, Integer);
-Define a function that takes an array of integers as a parameter and returns an integer. Write 2 unit tests to verify the function validity.
-public Integer task7(Integer[]);
-Define a function that takes an array of integers and an integer as parameters and returns a boolean. Write 2 unit tests to verify the function validity.
-public Boolean task8(Integer[], Integer);
-Define a function that takes an ArrayList of Strings as a parameter and returns an integer. Write 2 unit tests to verify the function validity.
-public Integer task9(ArrayList<String>);
-Define a function that takes a HashMap (exact details are up to you) as a parameter and returns an integer. Write 2 unit tests to verify the function validity.
-public Integer task10(HashMap<>);
-  */
+/*Define a function that takes 2 integers as a parameter and returns an integer. Write 2 unit tests to verify the function validity.*/
+public int task5(int userInt01,  int userInt02){
+    int total = userInt01 * userInt02;
+    return total;
+}
+/*Define a function that takes a string and an integer as parameters and returns a Character. Write 2 unit tests to verify the function validity.*/
+public char task6(String userStr, int userInt){
+    char[] userChars = userStr.toCharArray();
+    return userChars[userInt];
+}
+/*Define a function that takes an array of integers as a parameter and returns an integer. Write 2 unit tests to verify the function validity.*/
+public int task7(int[] arr){
+    int lengtharr = arr.length;
+    return lengtharr;
+}
+/*Define a function that takes an array of integers and an integer as parameters and returns a boolean. Write 2 unit tests to verify the function validity.*/
+public Boolean task8(int[] arr, int userInt){
+    boolean lengthArr = false;
+    if(arr.length == userInt){
+        lengthArr = true;
+    }else{
+        lengthArr = false;
+    }
+    return lengthArr;
+}
+/*Define a function that takes an ArrayList of Strings as a parameter and returns an integer. Write 2 unit tests to verify the function validity.*/
+public int task9(ArrayList<String> arrlist){
+    int listSize = arrlist.size();
+    return listSize;
+}
+/*Define a function that takes a HashMap (exact details are up to you) as a parameter and returns an integer. Write 2 unit tests to verify the function validity.*/
+//public int task10(HashMap<String>){}
 }
