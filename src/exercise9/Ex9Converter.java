@@ -6,7 +6,7 @@ package exercise9;
  */
 public class Ex9Converter {
   public Double c2f(Double valueFrom) {
-    throw new UnsupportedOperationException();
+      return (valueFrom * 9/5) + 32;
   }
 
   public Double c2k(Double valueFrom) {
