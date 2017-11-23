@@ -2,7 +2,7 @@ package exercise9;
 
 /**
  * Class Ex9Converter
- * @author yasiro01
+ * @author casaer01
  */
 public class Ex9Converter {
   public Double c2f(Double valueFrom) {

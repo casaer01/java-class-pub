@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package exercise9;
-
+import java.text.DecimalFormat;
 /**
  *
  * @author casaer01
@@ -36,6 +36,14 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButtonConvert.setText("Convert");
+        jButtonConvert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConvertActionPerformed(evt);
+            }
+        });
+
+        jTextFieldOutput.setEditable(false);
+        jTextFieldOutput.setBackground(new java.awt.Color(255, 255, 255));
 
         jComboBoxDegreeSelect01.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fahrenheit", "Celsius", "Kelvin" }));
 
@@ -77,6 +85,34 @@ public class Ex9DriverGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConvertActionPerformed
+            double degrees = Double.parseDouble(jTextFieldInput.getText());
+            String fromDegree = jComboBoxDegreeSelect01.getSelectedItem().toString();
+            String toDegree = jComboBoxDegreeSelect02.getSelectedItem().toString();
+            Ex9Converter convert = new Ex9Converter();
+            System.out.println(fromDegree + " " + toDegree);
+            DecimalFormat df = new DecimalFormat(".00");
+            
+            //jTextFieldOutput.setText("Test");
+            //Fahrenheit, Celsius, Kelvin
+            //c2f, c2k, f2c, f2k, k2c, k2f
+            if (fromDegree == "Celsius" && toDegree == "Fahrenheit") {
+                jTextFieldOutput.setText(Double.toString(convert.c2f(degrees)));
+            } else if (fromDegree == "Celsius" && toDegree == "Kelvin"){
+                jTextFieldOutput.setText(Double.toString(convert.c2k(degrees)));
+            } else if (fromDegree == "Fahrenheit" && toDegree == "Celsius") {
+                jTextFieldOutput.setText(Double.toString(convert.f2c(degrees)));
+            } else if (fromDegree == "Fahrenheit" && toDegree == "Kelvin") {
+                jTextFieldOutput.setText(Double.toString(convert.f2k(degrees)));
+            } else if (fromDegree == "Kelvin" && toDegree == "Celsius"){
+                jTextFieldOutput.setText(Double.toString(convert.k2c(degrees)));
+            } else if (fromDegree == "Kelvin" && toDegree == "Celsius") {
+                jTextFieldOutput.setText(Double.toString(convert.k2f(degrees)));
+            } else {
+                jTextFieldOutput.setText(Double.toString(degrees));
+            }
+    }//GEN-LAST:event_jButtonConvertActionPerformed
 
     /**
      * @param args the command line arguments
