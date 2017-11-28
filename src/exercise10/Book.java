@@ -1,16 +1,19 @@
 package exercise10;
 
 import java.util.Objects;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * Class Book
- * @author yasiro01
+ * @author casaer01
  */
 public class Book {
-    private final String Title;
-    private final String Author;
-    private double price;
-    private final Integer Year;
+    final String Title;
+    final String Author;
+    double price;
+    final Integer Year;
 
     public Book(String Title, String Author, double price, Integer Year) {
         this.Title = Title;
@@ -79,17 +82,41 @@ public class Book {
         }
         return true;
     }
-    
+
+    @Override
+    public String toString() {
+        return Title + " " + Year + " by " + Author + " costs $" + price;
+    }
 }
 
+
 class ByTitle implements Comparator<Book> {
+    @Override
+    public int compare(Book b1, Book b2) {
+        return b1.Title.compareTo(b2.Title);
+    }
 }
 
 class ByAuthor implements Comparator<Book> {
+    @Override
+    public int compare(Book b1, Book b2) {
+        return b1.Author.compareTo(b2.Author);
+    }
 }
 
 class ByPrice implements Comparator<Book> {
+    @Override
+    public int compare(Book b1, Book b2) {
+        String b01 = Double.toString(b1.price);
+        String b02 = Double.toString(b2.price);
+        
+        return b01.compareTo(b02);
+    }
 }
 
 class ByYear implements Comparator<Book> {
+    @Override
+    public int compare(Book b1, Book b2) {
+        return b1.Year.compareTo(b2.Year);
+    }
 }
