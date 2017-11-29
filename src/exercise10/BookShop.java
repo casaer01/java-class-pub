@@ -17,32 +17,44 @@ import java.util.regex.Pattern;
  * @author yasiro01
  */
 public class BookShop {
+    ArrayList<Book> catalog;
 
-  public BookShop() {
-  }
-  
-  public BookShop(String filename) throws FileNotFoundException {
-  }
-  
-  public BookShop(BookShop anotherBookShop) {
-  }
-  
-  public void addNewTitle(Book book) {
-  }
-  
-  public int size() {
-  }
-  
-  public void discountAll(Double discountPercent) {
-  }
-  
-  public void printCatalog() {
-  }
-  
-  public void order(Comparator<Book> comp) {
-  }
-  
-  public ArrayList<Book> getCatalog() {
-  }
+    public BookShop() {
+        catalog = new ArrayList();
+    }
+
+    public BookShop(String filename) throws FileNotFoundException, IOException {
+        this();
+        BufferedReader inputFile = new BufferedReader(new FileReader(filename));
+        String line;
+        while ((line = inputFile.readLine()) != null) {
+            /* Turn each line into an array of Strings and print it */
+            String[] lineContent = line.split(",");
+            for (String item: lineContent) {
+              catalog.add(Book(item));
+            }
+        }
+    }
+
+    public BookShop(BookShop anotherBookShop) {
+    }
+
+    public void addNewTitle(Book book) {
+    }
+
+    public int size() {
+    }
+
+    public void discountAll(Double discountPercent) {
+    }
+
+    public void printCatalog() {
+    }
+
+    public void order(Comparator<Book> comp) {
+    }
+
+    public ArrayList<Book> getCatalog() {
+    }
 
 }
