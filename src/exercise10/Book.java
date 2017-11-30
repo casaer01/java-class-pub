@@ -1,5 +1,6 @@
 package exercise10;
 
+import java.text.DecimalFormat;
 import java.util.Objects;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -85,7 +86,8 @@ public class Book {
 
     @Override
     public String toString() {
-        return Title + " " + Year + " by " + Author + " costs $" + price;
+        DecimalFormat priceFormat = new DecimalFormat("0.00");
+        return (Title + " " + Year + " by " + Author + " costs $" + priceFormat.format(price));
     }
 }
 
