@@ -50,6 +50,11 @@ public class Ex11Logic {
     * print a list of items
     */
     // TODO: Implement method printList
+    public <T> void printList(Collection<T> coll){
+        for (T item: coll) {
+            System.out.println(item);
+        }
+    }
 
     /**
     * Task 4
@@ -58,7 +63,13 @@ public class Ex11Logic {
     * @return the smallest item in the collection
     */
     // TODO: Implement method findMinItem
+    public <T> String findMinItem (Collection<T> coll) {
+        for (T item: coll) {
+            
+        }
+        return "null";
     }
+}
 
     /**
     * Task 5
