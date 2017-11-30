@@ -73,6 +73,7 @@ public class BookShop {
     }
 
     public void order(Comparator<Book> comp) {
+        Collections.sort(catalog, comp);
     }
 
     public ArrayList<Book> getCatalog() {
