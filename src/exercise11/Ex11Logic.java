@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package exercise11;
 
 import java.util.Collection;
@@ -33,16 +29,10 @@ public class Ex11Logic {
     */
     // TODO: Implement method greater
     public <T extends Comparable> T greater(T item1, T item2, T item3) {
-        if (item1.compareTo(item2) >= 0){
+        if (item1.compareTo(item2) >= 0 && item1.compareTo(item3) >=0){
             return item1;
-        } else if (item1.compareTo(item3) >= 0) {
-            return item1;
-        } else if (item2.compareTo(item1) >= 0) {
+        } else if (item2.compareTo(item1) >= 0 && item2.compareTo(item3) >= 0) {
             return item2;
-        } else if (item2.compareTo(item3) >= 0) {
-            return item2;
-        } else if (item3.compareTo(item1) >= 0) {
-            return item3;
         } else {
             return item3;
         }
@@ -57,7 +47,7 @@ public class Ex11Logic {
     // TODO: Implement method printList
     public <T> void printList(T ... list){
         for (T item: list) {
-            System.out.println(item);
+            System.out.print(item + " ");
         }
     }
 
